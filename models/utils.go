@@ -9,7 +9,7 @@ import (
 )
 
 func getJson(url string, target interface{}) error {
-	c := &http.Client{Timeout: 3 * time.Second}
+	c := &http.Client{Timeout: 10 * time.Second}
 	r, err := c.Get(url)
 	if err != nil {
 		return err
